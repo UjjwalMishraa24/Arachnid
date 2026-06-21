@@ -2,6 +2,7 @@
 from urllib.parse import urlsplit, urljoin
 from bs4 import BeautifulSoup, Tag
 
+
 # for getting url in a normal form.
 def normalize_url(url):
     url_parts = urlsplit(url)
@@ -58,12 +59,13 @@ def extract_page_data(html: str, page_url: str) -> dict:
     }
     return page_data
 
-input_url = "https://crawler-test.com"
-input_body = '''<html><body>
-        <h1>Test Title</h1>
-        <p>This is the first paragraph.</p>
-        <a href="/link1">Link 1</a>
-        <img src="/image1.jpg" alt="Image 1">
-    </body></html>'''
+# input_url = "https://crawler-test.com"
+# input_body = '''<html><body>
+#         <h1>Test Title</h1>
+#         <p>This is the first paragraph.</p>
+#         <a href="/link1">Link 1</a>
+#         <img src="/image1.jpg" alt="Image 1">
+#     </body></html>'''
 
-print(extract_page_data(input_body, input_url))
+# print(extract_page_data(input_body, input_url))
+
